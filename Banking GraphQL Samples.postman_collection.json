@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "e5eb95f9-c285-4c5f-9423-d7dd9c221da2",
+		"name": "Banking GraphQL Samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sample Query User 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJzdWJqZWN0IjoiNDY3NzQ1ODYzMjQyIiwic2NvcGVzIjoibmFtZXMifQ==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  accounts {\n    balance\n    nickname\n    id\n    branch\n    owner\n    currency\n  }\n  transfers {\n    date\n    amount\n    creditor {\n      nickname\n    }\n    debitor {\n      nickname\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sample Query User 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJzdWJqZWN0IjoiNDY5ODYzMjE2ODEzIiwic2NvcGVzIjoibmFtZXMifQ=="
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  accounts {\n    balance\n    nickname\n    id\n    branch\n  }\n  transfers {\n    date\n    amount\n    creditor {\n      nickname\n    }\n    debitor {\n      nickname\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8ecc5e2f-6e45-4617-a2af-d53588c15a05",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "90c18dca-2bc6-4f7e-9cea-5da35c2d0990",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
