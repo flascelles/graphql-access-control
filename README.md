@@ -104,7 +104,8 @@ Result - You should see the following output:
 ```
 🚀 Server ready at http://localhost:4000/
 ```
-##Querying the server using Postman
+
+## Querying the server using Postman
 
 You can query the GraphQL API by using the Postman collection provided. Open Postman, click `Import`, click `Choose Files` and select the file from this repo `Banking GraphQL Samples.postman_collection.json` 
 
